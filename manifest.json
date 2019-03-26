@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "Wizz",
+    "version": "1.0",
+  
+    "description": "Wizz like msn",
+  
+    "icons": {
+      "48": "icons/wizz_48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["wizz.js", "jquery-3.3.1.min.js"]
+      }
+    ]
+  
+  }
