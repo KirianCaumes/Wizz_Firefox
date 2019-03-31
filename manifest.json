@@ -1,20 +1,32 @@
 {
-
     "manifest_version": 2,
     "name": "Wizz",
-    "version": "1.0",
-  
+    "version": "0.1",
     "description": "Wizz like msn",
-  
     "icons": {
-      "48": "icons/wizz_48.png"
+        "48": "img/wizz_48.png"
     },
-  
+    "browser_action": {
+        "default_icon": {
+            "16": "img/wizz_16.png",
+            "32": "img/wizz_32.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
     "content_scripts": [
-      {
-        "matches": ["*://*.mozilla.org/*"],
-        "js": ["wizz.js", "jquery-3.3.1.min.js"]
-      }
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab"
     ]
-  
-  }
+}
